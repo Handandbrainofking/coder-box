@@ -1,0 +1,9 @@
+
+GET http://op.juhe.cn/onebox/movie/pmovie?key=APPKEY&city=苏州 HTTP/1.1
+
+
+
+
+GET https://example.com/comments/1 HTTP/1.1
+
+GET http://www.duans.top/freeApi/api.php?act=getJoke&page=1&count=10 HTTP/1.1
