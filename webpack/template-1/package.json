@@ -10,6 +10,9 @@
   "author": "zoiew <wscats@126.com> (https://github.com/zoiewLeung)",
   "license": "MIT",
   "devDependencies": {
+    "cssnano": "^4.1.10",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "webpack-dev-middleware": "^4.1.0",
     "webpack-hot-middleware": "^2.25.0"
   }

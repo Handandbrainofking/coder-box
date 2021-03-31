@@ -1,0 +1,20 @@
+{
+  "name": "phoenix",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "watch": "node build/build.watch",
+    "unit": "cross-env BABEL=test karma start test/unit/karma.conf.js --single-run",
+    "e2e": "nightwatch"
+  },
+  "keywords": [],
+  "author": "zoiew <wscats@126.com> (https://github.com/zoiewLeung)",
+  "license": "MIT",
+  "devDependencies": {
+    "mockjs": "^1.1.0"
+  },
+  "dependencies": {}
+}
