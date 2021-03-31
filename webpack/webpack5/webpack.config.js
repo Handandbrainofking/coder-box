@@ -2,6 +2,7 @@ const {resolve}  = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin') //压缩css
 
 module.exports = {
     entry: './src/main.js',
@@ -68,7 +69,8 @@ module.exports = {
         }),
         new miniCssExtractPlugin({
             filename: "index.css"
-        })
+        }),
+        new OptimizeCssAssetsWebpackPlugin()
     ],
     mode: 'development'
 }
