@@ -56,6 +56,23 @@ module.exports = {
                 use: [
                     miniCssExtractPlugin.loader,'css-loader', 'postcss-loader','stylus-loader'
                 ]
+            },
+            {
+                test: /\.(jpe?g|png|gif)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 1024 * 10,
+                    outputPath: 'imgs',
+                    publicPath: './imgs',
+                    esModule: false
+                }
+            },
+            {
+                test: /\.(htm|html)$/,
+                loader: 'html-loader',
+                options: {
+                    esModule: false
+                }
             }
         ]
     },
