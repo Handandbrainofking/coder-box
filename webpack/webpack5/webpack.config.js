@@ -11,8 +11,9 @@ module.exports = {
         path: resolve(__dirname, 'dist')
     },
     resolve: {
+        extensions: ['.js','.vue','.json'],
         alias: {
-            'src': '@'
+            '@': resolve('src')
         }
     },
     module: {
@@ -68,12 +69,21 @@ module.exports = {
                 }
             },
             {
-                test: /\.(htm|html)$/,
-                loader: 'html-loader',
+                test: /\.(eot|woff|ttf|svg)$/,
+                loader: 'file-loader',
                 options: {
-                    esModule: false
+                    output: 'fonts',
+                    publicPath: './fonts'
                 }
             }
+            //与html-webpack-plugin冲突
+            // {
+            //     test: /\.(htm|html)$/,
+            //     loader: 'html-loader',
+            //     options: {
+            //         esModule: false
+            //     }
+            // }
         ]
     },
     plugins: [
@@ -89,5 +99,12 @@ module.exports = {
         }),
         new OptimizeCssAssetsWebpackPlugin()
     ],
-    mode: 'development'
+    mode: 'development',
+    devServer: {
+        contentBase: resolve(__dirname, 'dist'), //打包后的文件路径
+        open: true, //自动打开浏览器
+        compress: true, //启动gzip压缩
+        port: 3000, //端口号
+    },
+    target: 'web'
 }
