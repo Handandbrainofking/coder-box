@@ -1,0 +1,20 @@
+{
+    "name": "panda-tool-lib",
+    "version": "0.0.1",
+    "main": "main.js",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "echo 'hello, world!'"
+    },
+    "bin": {
+        "panda": "./bin/panda.js"
+    },
+    "author": "zoiew",
+    "devDependencies": {
+        "chokidar": "^3.5.1",
+        "colors": "^1.4.0",
+        "commander": "^7.2.0",
+        "glob": "^7.1.7",
+        "handlebars": "^4.7.7"
+    }
+}
