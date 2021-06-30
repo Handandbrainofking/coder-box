@@ -1,3 +1,6 @@
 {
-    "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "auto-close-tag.disableOnLanguage": ["typescript"]
 }
